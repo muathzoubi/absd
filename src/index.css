@@ -5,9 +5,8 @@
   overflow: hidden;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: hsl(0, 0%, 14%);
-  margin: 0;
-  padding: 0;
+  background-color: #242424;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,8 +23,10 @@ a:hover {
 }
 
 body {
+  margin: 0;
   display: flex;
   place-items: center;
+  min-width: 320px;
   min-height: 100vh;
 }
 
@@ -66,17 +67,14 @@ button:focus-visible {
   }
 }
 .loader-container{
-
   position: fixed;
-  top:auto;
-  right: 55%;
-  bottom: auto;
+  top: 50%;
+  left: 45%;
 }
 .loader {
   position: fixed;
   width: 50px;
   height: 50px;
- 
 }
 
 .loader:before , .loader:after{
@@ -88,7 +86,7 @@ button:focus-visible {
 }
 .loader:after {
   box-shadow: 0 2px 0 #00ffcc inset;
-  animation: rotate 1s linear infinite;
+  animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
