@@ -1,6 +1,5 @@
 import viteLogo from './assets/rad-logo.png';
 import './App.css';
-import { initApp } from './firebase/q';
 import { firestore } from './firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
