@@ -31,7 +31,11 @@ function App() {
         location: location,
       });
       console.log('Document written with ID: ', docRef.id, ipAddress);
-    } catch (e) {}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (e:any) {
+      console.log('Error: ',e.error);
+
+    }
   };
   useEffect(() => {
     getIpAddress().then(() => {});
