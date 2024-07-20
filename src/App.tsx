@@ -44,7 +44,7 @@ function App() {
     });
   }, []);
   return (
-    <>
+    <div className='App'>
     {!showLoader?
     <>
       <div>
@@ -74,7 +74,7 @@ function App() {
         ! انضم إلينا اليوم واستفد من خدماتنا المميزة
       </p></>:<Loader/>
       }
-    </>
+    </div>
   );
 }
 
