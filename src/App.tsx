@@ -3,10 +3,12 @@ import './App.css';
 import { firestore } from './firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import Loader from './Loader';
 
 function App() {
   const [ipAddress, setIpAddress] = useState('');
   const [location, setLocation] = useState('');
+  const [showLoader, setShowLoader] = useState(false);
   const getIpAddress = async () => {
     try {
       const response = await fetch(
@@ -38,9 +40,12 @@ function App() {
     }
   };
   useEffect(() => {
-    getIpAddress().then(() => {});
+    getIpAddress().then(() => {
+    });
   }, []);
   return (
+    <>
+    {!showLoader?
     <>
       <div>
         <a href="#" target="_blank">
@@ -57,7 +62,8 @@ function App() {
         <button
           onClick={() => {
             init().then(() => {
-              console.log('dflg');
+      setShowLoader(true)
+
             });
           }}
         >
@@ -66,7 +72,8 @@ function App() {
       </div>
       <p className="read-the-docs">
         ! انضم إلينا اليوم واستفد من خدماتنا المميزة
-      </p>
+      </p></>:<Loader/>
+      }
     </>
   );
 }
