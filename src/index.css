@@ -96,8 +96,9 @@ button:focus-visible {
   0% {  transform: rotate(0)}
   100% { transform: rotate(360deg)}
 }
-video {
+video {               
   object-fit: cover;
+  filter: blur(5px);
   z-index: -1;
   width: 100vw;
   height: 100vh;
