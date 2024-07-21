@@ -47,7 +47,12 @@ function App() {
     <div className='App'>
     {!showLoader?
     <>
-      <div>
+  <>
+  <video playsInline autoPlay muted loop poster="polina.jpg" id="bgvid">
+  <source src="V.webm" type="video/webm"/>
+  <source src="VID.mp4" type="video/mp4"/>
+</video></>
+      <div style={{zIndex:99999999999}}>
         <a href="#" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

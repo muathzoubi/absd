@@ -28,11 +28,14 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  text-shadow: 2px 2px 4px #000000;
+
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3.2em; 
+   text-shadow: 2px 2px 4px #000000;
+
 }
 
 button {
@@ -92,4 +95,13 @@ button:focus-visible {
 @keyframes rotate {
   0% {  transform: rotate(0)}
   100% { transform: rotate(360deg)}
+}
+video {
+  object-fit: cover;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
